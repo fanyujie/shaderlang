@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\Grocery\hw\homebrew\shaderlang\build\CMakeFiles\f3a01853a1866d8f0e00b81a0eab6f89\CppGenfile.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Grocery\hw\homebrew\shaderlang\build\CMakeFiles\7bcddac8917180e2db19641646c523c7\CompilerCPP.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Grocery\hw\homebrew\shaderlang\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\Grocery\hw\homebrew\shaderlang\build\CMakeFiles\CompilerCPP" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{BC11034B-6AB0-370A-82C4-5E830987F1D4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

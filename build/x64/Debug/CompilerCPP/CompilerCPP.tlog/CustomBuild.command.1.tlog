@@ -1,0 +1,28 @@
+^D:\GROCERY\HW\HOMEBREW\SHADERLANG\BUILD\CMAKEFILES\F3A01853A1866D8F0E00B81A0EAB6F89\CPPGENFILE.RULE
+setlocal
+D:\tools\JAVA11\bin\java -jar D:/Grocery/hw/homebrew/shaderlang/thirdparty/antlr4/javajar/antlr.jar -Dlanguage=Cpp D:/Grocery/hw/homebrew/shaderlang/g4/shaderlang.g4 -o D:/Grocery/hw/homebrew/shaderlang/src
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^D:\GROCERY\HW\HOMEBREW\SHADERLANG\BUILD\CMAKEFILES\7BCDDAC8917180E2DB19641646C523C7\COMPILERCPP.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^D:\GROCERY\HW\HOMEBREW\SHADERLANG\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Grocery/hw/homebrew/shaderlang -BD:/Grocery/hw/homebrew/shaderlang/build --check-stamp-file D:/Grocery/hw/homebrew/shaderlang/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

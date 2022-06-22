@@ -1,0 +1,1 @@
+D:/tools/JAVA11/bin/java -jar antlr.jar -Dlanguage=Cpp TLexer.g4

@@ -1,4 +1,4 @@
-// Generated from d:\Grocery\hw\homebrew\shaderlang\g4\shaderlang.g4 by ANTLR 4.9.2
+// Generated from ../shaderlang.g4 by ANTLR 4.10.1
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class shaderlangParser extends Parser {
-	static { RuntimeMetaData.checkVersion("4.9.2", RuntimeMetaData.VERSION); }
+	static { RuntimeMetaData.checkVersion("4.10.1", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
@@ -116,6 +116,19 @@ public class shaderlangParser extends Parser {
 			return getRuleContext(SubshaderContext.class,0);
 		}
 		public StructContext(ProgContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof shaderlangListener ) ((shaderlangListener)listener).enterStruct(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof shaderlangListener ) ((shaderlangListener)listener).exitStruct(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof shaderlangVisitor ) return ((shaderlangVisitor<? extends T>)visitor).visitStruct(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final ProgContext prog() throws RecognitionException {
@@ -173,6 +186,19 @@ public class shaderlangParser extends Parser {
 			return getRuleContext(PropertyContext.class,i);
 		}
 		public PropertiesexpContext(PropertiesContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof shaderlangListener ) ((shaderlangListener)listener).enterPropertiesexp(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof shaderlangListener ) ((shaderlangListener)listener).exitPropertiesexp(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof shaderlangVisitor ) return ((shaderlangVisitor<? extends T>)visitor).visitPropertiesexp(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final PropertiesContext properties() throws RecognitionException {
@@ -237,6 +263,19 @@ public class shaderlangParser extends Parser {
 			return getRuleContext(InitvalueContext.class,0);
 		}
 		public PropertyexpContext(PropertyContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof shaderlangListener ) ((shaderlangListener)listener).enterPropertyexp(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof shaderlangListener ) ((shaderlangListener)listener).exitPropertyexp(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof shaderlangVisitor ) return ((shaderlangVisitor<? extends T>)visitor).visitPropertyexp(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final PropertyContext property() throws RecognitionException {
@@ -299,6 +338,19 @@ public class shaderlangParser extends Parser {
 			return getToken(shaderlangParser.NUMBER, i);
 		}
 		public InitvaluexpContext(InitvalueContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof shaderlangListener ) ((shaderlangListener)listener).enterInitvaluexp(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof shaderlangListener ) ((shaderlangListener)listener).exitInitvaluexp(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof shaderlangVisitor ) return ((shaderlangVisitor<? extends T>)visitor).visitInitvaluexp(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final InitvalueContext initvalue() throws RecognitionException {
@@ -365,6 +417,19 @@ public class shaderlangParser extends Parser {
 			return getRuleContext(PassContext.class,i);
 		}
 		public SubshaderexpContext(SubshaderContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof shaderlangListener ) ((shaderlangListener)listener).enterSubshaderexp(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof shaderlangListener ) ((shaderlangListener)listener).exitSubshaderexp(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof shaderlangVisitor ) return ((shaderlangVisitor<? extends T>)visitor).visitSubshaderexp(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final SubshaderContext subshader() throws RecognitionException {
@@ -427,6 +492,19 @@ public class shaderlangParser extends Parser {
 			return getRuleContext(StageContext.class,i);
 		}
 		public PassexpContext(PassContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof shaderlangListener ) ((shaderlangListener)listener).enterPassexp(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof shaderlangListener ) ((shaderlangListener)listener).exitPassexp(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof shaderlangVisitor ) return ((shaderlangVisitor<? extends T>)visitor).visitPassexp(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final PassContext pass() throws RecognitionException {
@@ -476,6 +554,19 @@ public class shaderlangParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_config; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof shaderlangListener ) ((shaderlangListener)listener).enterConfig(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof shaderlangListener ) ((shaderlangListener)listener).exitConfig(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof shaderlangVisitor ) return ((shaderlangVisitor<? extends T>)visitor).visitConfig(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final ConfigContext config() throws RecognitionException {
@@ -516,6 +607,19 @@ public class shaderlangParser extends Parser {
 			return getRuleContext(GpulangContext.class,0);
 		}
 		public StageexpContext(StageContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof shaderlangListener ) ((shaderlangListener)listener).enterStageexp(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof shaderlangListener ) ((shaderlangListener)listener).exitStageexp(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof shaderlangVisitor ) return ((shaderlangVisitor<? extends T>)visitor).visitStageexp(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final StageContext stage() throws RecognitionException {
@@ -566,6 +670,19 @@ public class shaderlangParser extends Parser {
 			return getRuleContext(RefuniformContext.class,i);
 		}
 		public GpulangexpContext(GpulangContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof shaderlangListener ) ((shaderlangListener)listener).enterGpulangexp(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof shaderlangListener ) ((shaderlangListener)listener).exitGpulangexp(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof shaderlangVisitor ) return ((shaderlangVisitor<? extends T>)visitor).visitGpulangexp(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final GpulangContext gpulang() throws RecognitionException {
@@ -620,6 +737,19 @@ public class shaderlangParser extends Parser {
 		public TerminalNode TYPE() { return getToken(shaderlangParser.TYPE, 0); }
 		public TerminalNode VARNAME() { return getToken(shaderlangParser.VARNAME, 0); }
 		public RefuniformexpContext(RefuniformContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof shaderlangListener ) ((shaderlangListener)listener).enterRefuniformexp(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof shaderlangListener ) ((shaderlangListener)listener).exitRefuniformexp(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof shaderlangVisitor ) return ((shaderlangVisitor<? extends T>)visitor).visitRefuniformexp(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final RefuniformContext refuniform() throws RecognitionException {
@@ -649,30 +779,60 @@ public class shaderlangParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\25g\4\2\t\2\4\3\t"+
-		"\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\3"+
-		"\2\3\2\3\2\3\2\3\2\3\2\3\2\3\2\3\2\3\3\3\3\3\3\7\3#\n\3\f\3\16\3&\13\3"+
-		"\3\3\3\3\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\5\3\5\3\5\3"+
-		"\5\3\5\7\5;\n\5\f\5\16\5>\13\5\3\5\3\5\3\6\3\6\3\6\6\6E\n\6\r\6\16\6F"+
-		"\3\6\3\6\3\7\3\7\3\7\6\7N\n\7\r\7\16\7O\3\7\3\7\3\b\3\b\3\t\3\t\3\t\3"+
-		"\t\3\t\3\n\7\n\\\n\n\f\n\16\n_\13\n\3\n\3\n\3\13\3\13\3\13\3\13\3\13\2"+
-		"\2\f\2\4\6\b\n\f\16\20\22\24\2\2\2a\2\26\3\2\2\2\4\37\3\2\2\2\6)\3\2\2"+
-		"\2\b\65\3\2\2\2\nA\3\2\2\2\fJ\3\2\2\2\16S\3\2\2\2\20U\3\2\2\2\22]\3\2"+
-		"\2\2\24b\3\2\2\2\26\27\7\3\2\2\27\30\7\4\2\2\30\31\7\22\2\2\31\32\7\4"+
-		"\2\2\32\33\7\5\2\2\33\34\5\4\3\2\34\35\5\n\6\2\35\36\7\6\2\2\36\3\3\2"+
-		"\2\2\37 \7\7\2\2 $\7\5\2\2!#\5\6\4\2\"!\3\2\2\2#&\3\2\2\2$\"\3\2\2\2$"+
-		"%\3\2\2\2%\'\3\2\2\2&$\3\2\2\2\'(\7\6\2\2(\5\3\2\2\2)*\7\22\2\2*+\7\b"+
-		"\2\2+,\7\4\2\2,-\7\22\2\2-.\7\4\2\2./\7\t\2\2/\60\7\21\2\2\60\61\7\n\2"+
-		"\2\61\62\7\13\2\2\62\63\5\b\5\2\63\64\7\f\2\2\64\7\3\2\2\2\65\66\7\21"+
-		"\2\2\66\67\7\b\2\2\67<\7\23\2\289\7\t\2\29;\7\23\2\2:8\3\2\2\2;>\3\2\2"+
-		"\2<:\3\2\2\2<=\3\2\2\2=?\3\2\2\2><\3\2\2\2?@\7\n\2\2@\t\3\2\2\2AB\7\r"+
-		"\2\2BD\7\5\2\2CE\5\f\7\2DC\3\2\2\2EF\3\2\2\2FD\3\2\2\2FG\3\2\2\2GH\3\2"+
-		"\2\2HI\7\6\2\2I\13\3\2\2\2JK\7\16\2\2KM\7\5\2\2LN\5\20\t\2ML\3\2\2\2N"+
-		"O\3\2\2\2OM\3\2\2\2OP\3\2\2\2PQ\3\2\2\2QR\7\6\2\2R\r\3\2\2\2ST\7\25\2"+
-		"\2T\17\3\2\2\2UV\7\20\2\2VW\7\5\2\2WX\5\22\n\2XY\7\6\2\2Y\21\3\2\2\2Z"+
-		"\\\5\24\13\2[Z\3\2\2\2\\_\3\2\2\2][\3\2\2\2]^\3\2\2\2^`\3\2\2\2_]\3\2"+
-		"\2\2`a\7\17\2\2a\23\3\2\2\2bc\7\21\2\2cd\7\22\2\2de\7\f\2\2e\25\3\2\2"+
-		"\2\7$<FO]";
+		"\u0004\u0001\u0013e\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001\u0002"+
+		"\u0002\u0007\u0002\u0002\u0003\u0007\u0003\u0002\u0004\u0007\u0004\u0002"+
+		"\u0005\u0007\u0005\u0002\u0006\u0007\u0006\u0002\u0007\u0007\u0007\u0002"+
+		"\b\u0007\b\u0002\t\u0007\t\u0001\u0000\u0001\u0000\u0001\u0000\u0001\u0000"+
+		"\u0001\u0000\u0001\u0000\u0001\u0000\u0001\u0000\u0001\u0000\u0001\u0001"+
+		"\u0001\u0001\u0001\u0001\u0005\u0001!\b\u0001\n\u0001\f\u0001$\t\u0001"+
+		"\u0001\u0001\u0001\u0001\u0001\u0002\u0001\u0002\u0001\u0002\u0001\u0002"+
+		"\u0001\u0002\u0001\u0002\u0001\u0002\u0001\u0002\u0001\u0002\u0001\u0002"+
+		"\u0001\u0002\u0001\u0002\u0001\u0003\u0001\u0003\u0001\u0003\u0001\u0003"+
+		"\u0001\u0003\u0005\u00039\b\u0003\n\u0003\f\u0003<\t\u0003\u0001\u0003"+
+		"\u0001\u0003\u0001\u0004\u0001\u0004\u0001\u0004\u0004\u0004C\b\u0004"+
+		"\u000b\u0004\f\u0004D\u0001\u0004\u0001\u0004\u0001\u0005\u0001\u0005"+
+		"\u0001\u0005\u0004\u0005L\b\u0005\u000b\u0005\f\u0005M\u0001\u0005\u0001"+
+		"\u0005\u0001\u0006\u0001\u0006\u0001\u0007\u0001\u0007\u0001\u0007\u0001"+
+		"\u0007\u0001\u0007\u0001\b\u0005\bZ\b\b\n\b\f\b]\t\b\u0001\b\u0001\b\u0001"+
+		"\t\u0001\t\u0001\t\u0001\t\u0001\t\u0000\u0000\n\u0000\u0002\u0004\u0006"+
+		"\b\n\f\u000e\u0010\u0012\u0000\u0000_\u0000\u0014\u0001\u0000\u0000\u0000"+
+		"\u0002\u001d\u0001\u0000\u0000\u0000\u0004\'\u0001\u0000\u0000\u0000\u0006"+
+		"3\u0001\u0000\u0000\u0000\b?\u0001\u0000\u0000\u0000\nH\u0001\u0000\u0000"+
+		"\u0000\fQ\u0001\u0000\u0000\u0000\u000eS\u0001\u0000\u0000\u0000\u0010"+
+		"[\u0001\u0000\u0000\u0000\u0012`\u0001\u0000\u0000\u0000\u0014\u0015\u0005"+
+		"\u0001\u0000\u0000\u0015\u0016\u0005\u0002\u0000\u0000\u0016\u0017\u0005"+
+		"\u0010\u0000\u0000\u0017\u0018\u0005\u0002\u0000\u0000\u0018\u0019\u0005"+
+		"\u0003\u0000\u0000\u0019\u001a\u0003\u0002\u0001\u0000\u001a\u001b\u0003"+
+		"\b\u0004\u0000\u001b\u001c\u0005\u0004\u0000\u0000\u001c\u0001\u0001\u0000"+
+		"\u0000\u0000\u001d\u001e\u0005\u0005\u0000\u0000\u001e\"\u0005\u0003\u0000"+
+		"\u0000\u001f!\u0003\u0004\u0002\u0000 \u001f\u0001\u0000\u0000\u0000!"+
+		"$\u0001\u0000\u0000\u0000\" \u0001\u0000\u0000\u0000\"#\u0001\u0000\u0000"+
+		"\u0000#%\u0001\u0000\u0000\u0000$\"\u0001\u0000\u0000\u0000%&\u0005\u0004"+
+		"\u0000\u0000&\u0003\u0001\u0000\u0000\u0000\'(\u0005\u0010\u0000\u0000"+
+		"()\u0005\u0006\u0000\u0000)*\u0005\u0002\u0000\u0000*+\u0005\u0010\u0000"+
+		"\u0000+,\u0005\u0002\u0000\u0000,-\u0005\u0007\u0000\u0000-.\u0005\u000f"+
+		"\u0000\u0000./\u0005\b\u0000\u0000/0\u0005\t\u0000\u000001\u0003\u0006"+
+		"\u0003\u000012\u0005\n\u0000\u00002\u0005\u0001\u0000\u0000\u000034\u0005"+
+		"\u000f\u0000\u000045\u0005\u0006\u0000\u00005:\u0005\u0011\u0000\u0000"+
+		"67\u0005\u0007\u0000\u000079\u0005\u0011\u0000\u000086\u0001\u0000\u0000"+
+		"\u00009<\u0001\u0000\u0000\u0000:8\u0001\u0000\u0000\u0000:;\u0001\u0000"+
+		"\u0000\u0000;=\u0001\u0000\u0000\u0000<:\u0001\u0000\u0000\u0000=>\u0005"+
+		"\b\u0000\u0000>\u0007\u0001\u0000\u0000\u0000?@\u0005\u000b\u0000\u0000"+
+		"@B\u0005\u0003\u0000\u0000AC\u0003\n\u0005\u0000BA\u0001\u0000\u0000\u0000"+
+		"CD\u0001\u0000\u0000\u0000DB\u0001\u0000\u0000\u0000DE\u0001\u0000\u0000"+
+		"\u0000EF\u0001\u0000\u0000\u0000FG\u0005\u0004\u0000\u0000G\t\u0001\u0000"+
+		"\u0000\u0000HI\u0005\f\u0000\u0000IK\u0005\u0003\u0000\u0000JL\u0003\u000e"+
+		"\u0007\u0000KJ\u0001\u0000\u0000\u0000LM\u0001\u0000\u0000\u0000MK\u0001"+
+		"\u0000\u0000\u0000MN\u0001\u0000\u0000\u0000NO\u0001\u0000\u0000\u0000"+
+		"OP\u0005\u0004\u0000\u0000P\u000b\u0001\u0000\u0000\u0000QR\u0005\u0013"+
+		"\u0000\u0000R\r\u0001\u0000\u0000\u0000ST\u0005\u000e\u0000\u0000TU\u0005"+
+		"\u0003\u0000\u0000UV\u0003\u0010\b\u0000VW\u0005\u0004\u0000\u0000W\u000f"+
+		"\u0001\u0000\u0000\u0000XZ\u0003\u0012\t\u0000YX\u0001\u0000\u0000\u0000"+
+		"Z]\u0001\u0000\u0000\u0000[Y\u0001\u0000\u0000\u0000[\\\u0001\u0000\u0000"+
+		"\u0000\\^\u0001\u0000\u0000\u0000][\u0001\u0000\u0000\u0000^_\u0005\r"+
+		"\u0000\u0000_\u0011\u0001\u0000\u0000\u0000`a\u0005\u000f\u0000\u0000"+
+		"ab\u0005\u0010\u0000\u0000bc\u0005\n\u0000\u0000c\u0013\u0001\u0000\u0000"+
+		"\u0000\u0005\":DM[";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

@@ -1,0 +1,36 @@
+Shader "testshaderlang"
+{
+    Properties
+    {
+        
+        _vertex ("_vertex",vec3)=vec3(0,0,0);
+        _normal ("_normal",vec3)=vec3(0,1.2,0);
+        _uv ("uv",vec3)=vec2(0,0.5);
+
+    }
+    Subshader
+    {
+        Pass
+        {
+            Vert
+            {
+                vec3 _vertex;
+                GLSLBEGIN
+                void main()
+                {
+
+                }
+                GLSLEND
+            }
+            Frag
+            {
+                vec3 _color;
+                GLSLBEGIN
+                void main(){
+                    gl;
+                }
+                GLSLEND
+            }
+        }
+    }
+}

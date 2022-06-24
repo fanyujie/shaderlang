@@ -8,21 +8,84 @@ else:
 # This class defines a complete listener for a parse tree produced by shaderlangParser.
 class shaderlangListener(ParseTreeListener):
 
-    # Enter a parse tree produced by shaderlangParser#prog.
-    def enterProg(self, ctx:shaderlangParser.ProgContext):
+    # Enter a parse tree produced by shaderlangParser#struct.
+    def enterStruct(self, ctx:shaderlangParser.StructContext):
         pass
 
-    # Exit a parse tree produced by shaderlangParser#prog.
-    def exitProg(self, ctx:shaderlangParser.ProgContext):
+    # Exit a parse tree produced by shaderlangParser#struct.
+    def exitStruct(self, ctx:shaderlangParser.StructContext):
         pass
 
 
-    # Enter a parse tree produced by shaderlangParser#expr.
-    def enterExpr(self, ctx:shaderlangParser.ExprContext):
+    # Enter a parse tree produced by shaderlangParser#propertiesexp.
+    def enterPropertiesexp(self, ctx:shaderlangParser.PropertiesexpContext):
         pass
 
-    # Exit a parse tree produced by shaderlangParser#expr.
-    def exitExpr(self, ctx:shaderlangParser.ExprContext):
+    # Exit a parse tree produced by shaderlangParser#propertiesexp.
+    def exitPropertiesexp(self, ctx:shaderlangParser.PropertiesexpContext):
+        pass
+
+
+    # Enter a parse tree produced by shaderlangParser#propertyexp.
+    def enterPropertyexp(self, ctx:shaderlangParser.PropertyexpContext):
+        pass
+
+    # Exit a parse tree produced by shaderlangParser#propertyexp.
+    def exitPropertyexp(self, ctx:shaderlangParser.PropertyexpContext):
+        pass
+
+
+    # Enter a parse tree produced by shaderlangParser#subshaderexp.
+    def enterSubshaderexp(self, ctx:shaderlangParser.SubshaderexpContext):
+        pass
+
+    # Exit a parse tree produced by shaderlangParser#subshaderexp.
+    def exitSubshaderexp(self, ctx:shaderlangParser.SubshaderexpContext):
+        pass
+
+
+    # Enter a parse tree produced by shaderlangParser#passexp.
+    def enterPassexp(self, ctx:shaderlangParser.PassexpContext):
+        pass
+
+    # Exit a parse tree produced by shaderlangParser#passexp.
+    def exitPassexp(self, ctx:shaderlangParser.PassexpContext):
+        pass
+
+
+    # Enter a parse tree produced by shaderlangParser#config.
+    def enterConfig(self, ctx:shaderlangParser.ConfigContext):
+        pass
+
+    # Exit a parse tree produced by shaderlangParser#config.
+    def exitConfig(self, ctx:shaderlangParser.ConfigContext):
+        pass
+
+
+    # Enter a parse tree produced by shaderlangParser#stageexp.
+    def enterStageexp(self, ctx:shaderlangParser.StageexpContext):
+        pass
+
+    # Exit a parse tree produced by shaderlangParser#stageexp.
+    def exitStageexp(self, ctx:shaderlangParser.StageexpContext):
+        pass
+
+
+    # Enter a parse tree produced by shaderlangParser#gpulangexp.
+    def enterGpulangexp(self, ctx:shaderlangParser.GpulangexpContext):
+        pass
+
+    # Exit a parse tree produced by shaderlangParser#gpulangexp.
+    def exitGpulangexp(self, ctx:shaderlangParser.GpulangexpContext):
+        pass
+
+
+    # Enter a parse tree produced by shaderlangParser#refuniformexp.
+    def enterRefuniformexp(self, ctx:shaderlangParser.RefuniformexpContext):
+        pass
+
+    # Exit a parse tree produced by shaderlangParser#refuniformexp.
+    def exitRefuniformexp(self, ctx:shaderlangParser.RefuniformexpContext):
         pass
 
 

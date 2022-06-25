@@ -35,6 +35,15 @@ class shaderlangListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by shaderlangParser#initvaluexp.
+    def enterInitvaluexp(self, ctx:shaderlangParser.InitvaluexpContext):
+        pass
+
+    # Exit a parse tree produced by shaderlangParser#initvaluexp.
+    def exitInitvaluexp(self, ctx:shaderlangParser.InitvaluexpContext):
+        pass
+
+
     # Enter a parse tree produced by shaderlangParser#subshaderexp.
     def enterSubshaderexp(self, ctx:shaderlangParser.SubshaderexpContext):
         pass

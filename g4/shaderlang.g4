@@ -9,7 +9,7 @@ grammar shaderlang;
 
 
 
-prog:	'Shader' '"'VARNAME'"' '{' properties subshader '}' #struct
+prog:	'Shader' '"'SHADERNAME'"' '{' properties subshader '}' #struct
 ; 
 properties : 'Properties' '{' (property)* '}' # propertiesexp
 ;
@@ -28,13 +28,20 @@ stage : STAGENAME '{' gpulang '}' # stageexp
 ;
 gpulang : (refuniform)* PROGSTR  # gpulangexp
 ;
-refuniform : TYPE VARNAME ';' # refuniformexp
+refuniform : DIRECTION TYPE VARNAME ';' # refuniformexp
 ;
 // tokens expressed as regular expressions
 
-PROGSTR : 'GLSLBEGIN' .*? 'GLSLEND';
-STAGENAME : 'Vert'|'Frag'|'Geom';
-TYPE : 'vec'[1-4|];
+DIRECTION : 'in'| 'out'
+;
+PROGSTR : 'GLSLBEGIN' .*? 'GLSLEND' 
+;
+STAGENAME : 'Vert'|'Frag'|'Geom'
+;
+TYPE : 'vec'[1-4|] | 'float' | 'half'
+;
+SHADERNAME : 'Shader.'[a-zA-Z|_][a-zA-Z0-9|_|.]*
+;
 VARNAME :  [a-zA-Z|_][a-zA-Z0-9|_]* ;
 NUMBER
    : '-'? INT ('.' [0-9] +)?

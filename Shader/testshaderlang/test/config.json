@@ -1,0 +1,59 @@
+{
+    "layouts": [
+        {
+            "filename": "pass0Vert.spv",
+            "stage": "Vert",
+            "layouts": [
+                {
+                    "location": 0,
+                    "type": "vec3",
+                    "name": "_vertex"
+                },
+                {
+                    "location": 1,
+                    "type": "vec4",
+                    "name": "_color"
+                }
+            ]
+        },
+        {
+            "filename": "pass0Frag.spv",
+            "stage": "Frag",
+            "layouts": [
+                {
+                    "location": 0,
+                    "type": "vec4",
+                    "name": "fragment_color"
+                }
+            ]
+        }
+    ],
+    "properties": [
+        {
+            "variablename": "_Color",
+            "guiname": "Color",
+            "type": "vec4",
+            "initvalue": {
+                "type": "vec4",
+                "parmas": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    1.0
+                ]
+            }
+        },
+        {
+            "variablename": "_Time",
+            "guiname": "Time",
+            "type": "float",
+            "initvalue": {
+                "type": "float",
+                "parmas": [
+                    0.0
+                ]
+            }
+        }
+    ],
+    "shadername": "Shader.testshaderlang.test"
+}

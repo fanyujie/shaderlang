@@ -17,8 +17,8 @@ public class shaderlangParser extends Parser {
 		new PredictionContextCache();
 	public static final int
 		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, T__7=8, T__8=9, 
-		T__9=10, T__10=11, T__11=12, PROGSTR=13, STAGENAME=14, TYPE=15, VARNAME=16, 
-		NUMBER=17, INITVALUE=18, WS=19;
+		T__9=10, T__10=11, T__11=12, DIRECTION=13, PROGSTR=14, STAGENAME=15, TYPE=16, 
+		SHADERNAME=17, VARNAME=18, NUMBER=19, INITVALUE=20, WS=21;
 	public static final int
 		RULE_prog = 0, RULE_properties = 1, RULE_property = 2, RULE_initvalue = 3, 
 		RULE_subshader = 4, RULE_pass = 5, RULE_config = 6, RULE_stage = 7, RULE_gpulang = 8, 
@@ -41,8 +41,8 @@ public class shaderlangParser extends Parser {
 	private static String[] makeSymbolicNames() {
 		return new String[] {
 			null, null, null, null, null, null, null, null, null, null, null, null, 
-			null, "PROGSTR", "STAGENAME", "TYPE", "VARNAME", "NUMBER", "INITVALUE", 
-			"WS"
+			null, "DIRECTION", "PROGSTR", "STAGENAME", "TYPE", "SHADERNAME", "VARNAME", 
+			"NUMBER", "INITVALUE", "WS"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -108,7 +108,7 @@ public class shaderlangParser extends Parser {
 		}
 	}
 	public static class StructContext extends ProgContext {
-		public TerminalNode VARNAME() { return getToken(shaderlangParser.VARNAME, 0); }
+		public TerminalNode SHADERNAME() { return getToken(shaderlangParser.SHADERNAME, 0); }
 		public PropertiesContext properties() {
 			return getRuleContext(PropertiesContext.class,0);
 		}
@@ -130,7 +130,7 @@ public class shaderlangParser extends Parser {
 			setState(21);
 			match(T__1);
 			setState(22);
-			match(VARNAME);
+			match(SHADERNAME);
 			setState(23);
 			match(T__1);
 			setState(24);
@@ -579,7 +579,7 @@ public class shaderlangParser extends Parser {
 			setState(91);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while (_la==TYPE) {
+			while (_la==DIRECTION) {
 				{
 				{
 				setState(88);
@@ -617,6 +617,7 @@ public class shaderlangParser extends Parser {
 		}
 	}
 	public static class RefuniformexpContext extends RefuniformContext {
+		public TerminalNode DIRECTION() { return getToken(shaderlangParser.DIRECTION, 0); }
 		public TerminalNode TYPE() { return getToken(shaderlangParser.TYPE, 0); }
 		public TerminalNode VARNAME() { return getToken(shaderlangParser.VARNAME, 0); }
 		public RefuniformexpContext(RefuniformContext ctx) { copyFrom(ctx); }
@@ -630,10 +631,12 @@ public class shaderlangParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(96);
-			match(TYPE);
+			match(DIRECTION);
 			setState(97);
-			match(VARNAME);
+			match(TYPE);
 			setState(98);
+			match(VARNAME);
+			setState(99);
 			match(T__9);
 			}
 		}
@@ -649,30 +652,30 @@ public class shaderlangParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\25g\4\2\t\2\4\3\t"+
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\27h\4\2\t\2\4\3\t"+
 		"\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\3"+
 		"\2\3\2\3\2\3\2\3\2\3\2\3\2\3\2\3\2\3\3\3\3\3\3\7\3#\n\3\f\3\16\3&\13\3"+
 		"\3\3\3\3\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\5\3\5\3\5\3"+
 		"\5\3\5\7\5;\n\5\f\5\16\5>\13\5\3\5\3\5\3\6\3\6\3\6\6\6E\n\6\r\6\16\6F"+
 		"\3\6\3\6\3\7\3\7\3\7\6\7N\n\7\r\7\16\7O\3\7\3\7\3\b\3\b\3\t\3\t\3\t\3"+
-		"\t\3\t\3\n\7\n\\\n\n\f\n\16\n_\13\n\3\n\3\n\3\13\3\13\3\13\3\13\3\13\2"+
-		"\2\f\2\4\6\b\n\f\16\20\22\24\2\2\2a\2\26\3\2\2\2\4\37\3\2\2\2\6)\3\2\2"+
-		"\2\b\65\3\2\2\2\nA\3\2\2\2\fJ\3\2\2\2\16S\3\2\2\2\20U\3\2\2\2\22]\3\2"+
-		"\2\2\24b\3\2\2\2\26\27\7\3\2\2\27\30\7\4\2\2\30\31\7\22\2\2\31\32\7\4"+
-		"\2\2\32\33\7\5\2\2\33\34\5\4\3\2\34\35\5\n\6\2\35\36\7\6\2\2\36\3\3\2"+
-		"\2\2\37 \7\7\2\2 $\7\5\2\2!#\5\6\4\2\"!\3\2\2\2#&\3\2\2\2$\"\3\2\2\2$"+
-		"%\3\2\2\2%\'\3\2\2\2&$\3\2\2\2\'(\7\6\2\2(\5\3\2\2\2)*\7\22\2\2*+\7\b"+
-		"\2\2+,\7\4\2\2,-\7\22\2\2-.\7\4\2\2./\7\t\2\2/\60\7\21\2\2\60\61\7\n\2"+
-		"\2\61\62\7\13\2\2\62\63\5\b\5\2\63\64\7\f\2\2\64\7\3\2\2\2\65\66\7\21"+
-		"\2\2\66\67\7\b\2\2\67<\7\23\2\289\7\t\2\29;\7\23\2\2:8\3\2\2\2;>\3\2\2"+
+		"\t\3\t\3\n\7\n\\\n\n\f\n\16\n_\13\n\3\n\3\n\3\13\3\13\3\13\3\13\3\13\3"+
+		"\13\2\2\f\2\4\6\b\n\f\16\20\22\24\2\2\2b\2\26\3\2\2\2\4\37\3\2\2\2\6)"+
+		"\3\2\2\2\b\65\3\2\2\2\nA\3\2\2\2\fJ\3\2\2\2\16S\3\2\2\2\20U\3\2\2\2\22"+
+		"]\3\2\2\2\24b\3\2\2\2\26\27\7\3\2\2\27\30\7\4\2\2\30\31\7\23\2\2\31\32"+
+		"\7\4\2\2\32\33\7\5\2\2\33\34\5\4\3\2\34\35\5\n\6\2\35\36\7\6\2\2\36\3"+
+		"\3\2\2\2\37 \7\7\2\2 $\7\5\2\2!#\5\6\4\2\"!\3\2\2\2#&\3\2\2\2$\"\3\2\2"+
+		"\2$%\3\2\2\2%\'\3\2\2\2&$\3\2\2\2\'(\7\6\2\2(\5\3\2\2\2)*\7\24\2\2*+\7"+
+		"\b\2\2+,\7\4\2\2,-\7\24\2\2-.\7\4\2\2./\7\t\2\2/\60\7\22\2\2\60\61\7\n"+
+		"\2\2\61\62\7\13\2\2\62\63\5\b\5\2\63\64\7\f\2\2\64\7\3\2\2\2\65\66\7\22"+
+		"\2\2\66\67\7\b\2\2\67<\7\25\2\289\7\t\2\29;\7\25\2\2:8\3\2\2\2;>\3\2\2"+
 		"\2<:\3\2\2\2<=\3\2\2\2=?\3\2\2\2><\3\2\2\2?@\7\n\2\2@\t\3\2\2\2AB\7\r"+
 		"\2\2BD\7\5\2\2CE\5\f\7\2DC\3\2\2\2EF\3\2\2\2FD\3\2\2\2FG\3\2\2\2GH\3\2"+
 		"\2\2HI\7\6\2\2I\13\3\2\2\2JK\7\16\2\2KM\7\5\2\2LN\5\20\t\2ML\3\2\2\2N"+
-		"O\3\2\2\2OM\3\2\2\2OP\3\2\2\2PQ\3\2\2\2QR\7\6\2\2R\r\3\2\2\2ST\7\25\2"+
-		"\2T\17\3\2\2\2UV\7\20\2\2VW\7\5\2\2WX\5\22\n\2XY\7\6\2\2Y\21\3\2\2\2Z"+
+		"O\3\2\2\2OM\3\2\2\2OP\3\2\2\2PQ\3\2\2\2QR\7\6\2\2R\r\3\2\2\2ST\7\27\2"+
+		"\2T\17\3\2\2\2UV\7\21\2\2VW\7\5\2\2WX\5\22\n\2XY\7\6\2\2Y\21\3\2\2\2Z"+
 		"\\\5\24\13\2[Z\3\2\2\2\\_\3\2\2\2][\3\2\2\2]^\3\2\2\2^`\3\2\2\2_]\3\2"+
-		"\2\2`a\7\17\2\2a\23\3\2\2\2bc\7\21\2\2cd\7\22\2\2de\7\f\2\2e\25\3\2\2"+
-		"\2\7$<FO]";
+		"\2\2`a\7\20\2\2a\23\3\2\2\2bc\7\17\2\2cd\7\22\2\2de\7\24\2\2ef\7\f\2\2"+
+		"f\25\3\2\2\2\7$<FO]";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

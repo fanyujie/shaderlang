@@ -1,11 +1,10 @@
-Shader "testshaderlang"
+Shader "Shader.testshaderlang.test"
 {
     Properties
     {
         
-        _vertex ("_vertex",vec3)=vec3(0,0,0);
-        _normal ("_normal",vec3)=vec3(0,1.2,0);
-        _uv ("uv",vec3)=vec2(0,0.5);
+        _Color("Color",vec4)=vec4(1.0,1.0,0,1.0);
+        _Time("Time",float)=float(0.0);
 
     }
     Subshader
@@ -14,20 +13,31 @@ Shader "testshaderlang"
         {
             Vert
             {
-                vec3 _vertex;
+                in vec3 _vertex;
+                in vec4 _color;
+                out vec4 fragment_color;
                 GLSLBEGIN
+                layout(binding=0) uniform blocktype
+                {
+                    vec4 _Color;
+                    float _Time;
+                } block ;
+
                 void main()
                 {
-
+                    gl_Position=vec4(_vertex,1);
+                    fragment_color=_color;
                 }
                 GLSLEND
             }
             Frag
             {
-                vec3 _color;
+                in vec4 fragment_color;
+
+                out vec4 Out_color;
                 GLSLBEGIN
                 void main(){
-                    gl;
+                    Out_color=fragment_color;
                 }
                 GLSLEND
             }

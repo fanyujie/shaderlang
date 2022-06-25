@@ -24,6 +24,11 @@ class shaderlangVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by shaderlangParser#initvaluexp.
+    def visitInitvaluexp(self, ctx:shaderlangParser.InitvaluexpContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by shaderlangParser#subshaderexp.
     def visitSubshaderexp(self, ctx:shaderlangParser.SubshaderexpContext):
         return self.visitChildren(ctx)
